@@ -3,7 +3,7 @@ This Ionic app allows you to read a QR Code to get the information of a person w
 A Firestore database is built with the information of all the attendants, this information is gathered from a .csv file containing all the responses from a Google Form.
 
 
-#### Setup
+### Setup
 
 Open your terminal.
 1. Clone this project `git clone https://github.com/Guchster/gdg-login.git`.
@@ -12,7 +12,7 @@ Open your terminal.
 4. Add a platform `ionic cordova platform add android` and connect an android device.
 5. Run the project in the device `ionic cordova run android`.
 
-#### Add Your Firestore Credentials
+### Add Your Firestore Credentials
 
 You can check out this great Ionic Firestore [tutorial here.](https://blog.ionicframework.com/building-ionic-apps-with-firestore/)
 
@@ -28,7 +28,7 @@ export const firebaseConfig = {
 };
 ```
 
-#### Define your custom parser for .csv file
+### Define your custom parser for .csv file
 
 You can populate your own database with the data from the responses of a Google Form.
 In order to do this there are a couple of things to do.
@@ -47,16 +47,16 @@ In order to do this there are a couple of things to do.
 * If you want to add additional attributes to each object, you can add them at parsing time like this:
   `person['some_key'] = 'some_value';`
 
-#### Populate your database
+### Populate your database
 Go to `src/app/app.component.ts` and remove the comment line `this.dbLoader.loadDatabase();`, this will load all the content from your `csv-database.ts` file to firestore.
 Remember that this action will overwrite all your previous firestore documents for each object in the JSON database, you can avoid this by changing the document id you refer to when saving the collection in the `src/providers/db-loader.ts` file.
 
-#### QR Code Generation
+### QR Code Generation
 At the time the QR Code generation is done manually using [this page](https://www.qr-code-generator.com/).
 The text you have to convert to QR Code should be the **personKey** generated at the `src/providers/db-loader.ts` file for each object of the collection.
 If the QR Code does not contain this **personKey** the entry will not be found at the Firestore collection, as it is stored with this key.
 
-#### Contact
+## Contact
 If you have questions or comments, add them to Issues section of this repository.
 
 If you have improvements generate a pull request.
