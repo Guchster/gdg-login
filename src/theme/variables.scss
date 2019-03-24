@@ -5,6 +5,9 @@
 // roboto, and noto sans fonts
 $font-path: "../assets/fonts";
 
+ion-app.cameraView, ion-app.cameraView ion-content, ion-app.cameraView .nav-decor {
+  background: transparent none !important;
+}
 
 // The app direction is used to include
 // rtl styles in your app. For more info, please see:

@@ -1,0 +1,48 @@
+page-attendant {
+  
+  .logo {
+    border-radius: 50%;
+    border: 3px solid black
+  }
+
+  .logo-space {
+    height: 170px; width: 170px; 
+    display: inline-block;
+  }
+
+  .name-section {
+    width: 100%;
+    margin: 24px 0px;
+    text-align: center;
+    font-size: 24px;
+  }
+
+  .logo-section {
+    margin-top: 48px;
+    text-align: center;
+  }
+  
+  .observations-title {
+    font-size: 24px;
+  }
+
+  .observations {
+    position: fixed;
+    font-size: 14px;
+  }
+
+  .outer {
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+  }
+   
+  .inner_fixed {
+    height: 450px;
+  }
+   
+  .inner_remaining {
+    flex-grow : 1;
+  }
+
+}

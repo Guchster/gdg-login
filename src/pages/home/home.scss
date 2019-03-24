@@ -1,3 +1,70 @@
 page-home {
 
+  .lightgreen {
+    color: lightgreen;
+  }
+
+  .red {
+    color: red;
+  }
+  
+  .logo {
+    border-radius: 50%;
+    border: 3px solid black
+  }
+
+  .logo-space {
+    height: 170px; width: 170px; 
+    display: inline-block;
+  }
+
+  .name-section {
+    width: 100%;
+    margin: 24px 0px;
+    text-align: center;
+    font-size: 48px;
+  }
+  
+  .logo-section {
+    margin-top: 48px;
+    text-align: center;
+  }
+
+  .participants {
+    font-size: 24px;
+    text-align: center;
+    margin-left: 40%
+  }
+
+  .scanner {
+    text-align: center;
+    height: 100%;
+    position:relative;
+  }
+
+  .counter-text {
+    float: left;
+    width: 40%; 
+    text-align: center;
+    font-size: 24px;
+  }
+
+  .close-button {
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    bottom:   0;
+  }
+
+  .btn {
+    display:inline-block;
+    height: 80px;
+    width: 80px;
+    border-radius: 50%; 
+  }
+
+  .my-icon {
+    font-size: 45px;
+  }
+  
 }
