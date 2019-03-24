@@ -8,7 +8,7 @@ A Firestore database is built with the information of all the attendants, this i
 Open your terminal.
 1. Clone this project `git clone https://github.com/Guchster/gdg-login.git`.
 2. Go to your project folder `cd gdg-login`.
-3. Install dependencies `npm i` (in macOS you may need to add the `--unsafe-perm=true` flag). 
+3. Install dependencies with `npm i` (in macOS you may need to add the `--unsafe-perm=true` flag). 
 4. Add a platform `ionic cordova platform add android` and connect an android device.
 5. Run the project in the device `ionic cordova run android`.
 
@@ -40,12 +40,12 @@ In order to do this there are a couple of things to do.
 
 2. Define your custom formKeyParser
 * Go to `src/providers/db-loader.ts`.
-* Define the keys of formKeyParser **exactly** as the keys from the JSON responses.
+* Define the keys of formKeyParser **exactly** as the keys from the JSON database at `src/providers/csv-database.ts`.
 * Define the values of formKeyParser as the attribute name you want to refer to.
 
 3. Add aditional document attributes (optional)
-If you want to add additional attributes to each object, you can add them at parsing time like this:
-`person['some_key'] = 'some_value';`
+* If you want to add additional attributes to each object, you can add them at parsing time like this:
+  `person['some_key'] = 'some_value';`
 
 #### Populate your database
 Go to `src/app/app.component.ts` and remove the comment line `this.dbLoader.loadDatabase();`, this will load all the content from your `csv-database.ts` file to firestore.
@@ -58,4 +58,5 @@ If the QR Code does not contain this **personKey** the entry will not be found a
 
 #### Contact
 If you have questions or comments, add them to Issues section of this repository.
+
 If you have improvements generate a pull request.
