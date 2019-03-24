@@ -1,6 +1,6 @@
 # gdg-login
 This Ionic app allows you to read a QR Code to get the information of a person who is attending to an event at registration time.
-A Firestore database is built with the information of all the attendants, this information if gathered from a .csv file containing all the responses from a Google Form.
+A Firestore database is built with the information of all the attendants, this information is gathered from a .csv file containing all the responses from a Google Form.
 
 
 ####Setup
