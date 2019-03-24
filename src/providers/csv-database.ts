@@ -9,7 +9,7 @@ export const csv =
       "Número de celular": 97403223,
       "Tipo de entrada": "Básica",
       "Foto de comprobante de depósito": {
-        "transferencia": "https://drive.google.com/open?authuser=0&usp=forms_web&id=1qxENeXGlG4fpPpz3S30Bqu99xLqjmV54"
+        "transferencia": "https://upload.wikimedia.org/wikipedia/en/thumb/2/2a/6ix9ine_%E2%80%93_Dummy_Boy.png/220px-6ix9ine_%E2%80%93_Dummy_Boy.png"
       },
       "¿Observaciones?": "Me lo preparan tesito porfa"
     },
@@ -22,7 +22,7 @@ export const csv =
       "Número de celular": 2341324,
       "Tipo de entrada": "Básica + souvenirs",
       "Foto de comprobante de depósito": {
-        "transferencia": "https://drive.google.com/open?authuser=0&usp=forms_web&id=1dTXRPJe9GVS8yMW2b8rlhbqsD9g6VS2j"
+        "transferencia": "http://solutionssap.com/wp-content/uploads/2016/05/Dummy.png"
       },
       "¿Observaciones?": ""
     }

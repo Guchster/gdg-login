@@ -20,6 +20,9 @@ export class HomePage {
     private qrProvider: QrProvider
   ) {
     this.init();
+    setTimeout(() => {
+      this.navCtrl.push('AttendantPage', { id: 'santiagommejiagmailcom' });
+    }, 1000);
   }
 
   private init() {

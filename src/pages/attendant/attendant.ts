@@ -22,11 +22,15 @@ export class AttendantPage {
   private loadAttendant(id: string) {
     try {
       const sub = this.fireStore.collection('attendants').doc(id).get().subscribe(attendant => {
-        console.log('attendant: ', attendant.data());
         if (attendant.data() !== undefined) {
-          this.attendant = attendant.data();
+          const data = attendant.data();
+          this.attendant = data;
           this.attendant['image'] = 'https://photos3.fotosearch.com/bthumb/CSP/CSP990/avatar-masked-man-or-alien-stock-illustration__k9886085.jpg';
-          this.registerAttendance(id);
+          if (data.attended) {
+            this.showMessage('This person has already been registered');
+          } else {
+            this.registerAttendance(id);
+          }
         } else {
           this.goBackWithError('This person is not registered.');
         }
@@ -36,6 +40,10 @@ export class AttendantPage {
       console.error(error);
       this.goBackWithError('Invalid QR Code!');
     }
+  }
+
+  private showMessage(message: string) {
+    alert(message);
   }
 
   private registerAttendance(id: string) {
@@ -59,7 +67,7 @@ export class AttendantPage {
   }
 
   private goBackWithError(error_message: string) {
-    alert(error_message);
+    this.showMessage(error_message);
     this.goBack();
   }
 

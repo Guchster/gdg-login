@@ -10,16 +10,17 @@ export class DbLoaderProvider {
   public loadDatabase() {
     const assistants: Map<string, any> = this.getAssistantsFromCSV(csv);
     this.populateBulkDatabase(assistants);
+    this.addConfigurations(assistants.size);
   }
 
   populateBulkDatabase(assistants: Map<string, any>) {
-    let peopleCounter = 0;
     assistants.forEach((value, key) => {
-      value['attended'] = false;
       this.fireStore.collection('attendants').doc(key).set(value);
-      peopleCounter++;
     });
-    const attendance = { total: peopleCounter, attendants: 0 };
+  }
+
+  addConfigurations(assistantsCount: number) {
+    const attendance = { total: assistantsCount, attendants: 0 };
     const event = { name: 'IWD 2019', location: 'Jalasoft' };
     this.fireStore.collection('configurations').doc('attendance').set(attendance);
     this.fireStore.collection('configurations').doc('event').set(event);
@@ -34,6 +35,7 @@ export class DbLoaderProvider {
         const key = parseData[1];
         person[key] = csvPerson[value];
       });
+      person['attended'] = false;
       const personKey = this.getEmailAsKey(person['email']);
       map.set(personKey, person);
     });
