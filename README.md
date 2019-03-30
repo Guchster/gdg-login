@@ -35,7 +35,7 @@ In order to do this there are a couple of things to do.
 
 1. Add your JSON database
 * Go to your Google Form and download the responses as .csv
-* Go to [this page](http://www.convertcsv.com/csv-to-json.htm) and convert your .csv file to a JSON array (CSV to JSON array).
+* Go to [this page](http://www.convertcsv.com/csv-to-json.htm) and convert your .csv file to a JSON array (CSV to JSON).
 * Go to `src/providers/csv-database.ts` and paste the JSON.
 
 2. Define your custom formKeyParser
